@@ -239,11 +239,10 @@ void Sort(tSt_ElmnList* Linked){
 	infotype data_min,min;
 	tSt_ElmnList temp;
 	temp = *Linked;
-	
-	i=temp.First;
+
 	data_min = Min(temp);
 	min = search(temp,data_min);
-	Linked->First = min;
+	Linked->First = i = min;
 	
 	while(!IsEmpty(temp.First)){
 		
